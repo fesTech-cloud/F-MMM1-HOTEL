@@ -1,0 +1,262 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 255, 0.192);
+
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 4rem;
+  background-color: white;
+  box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.nav h1{
+  color: brown;
+  font-size: 32px;
+}
+.nav h3{
+  color: greenyellow;
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+}
+.nav small{
+  margin-left: 1rem;
+  color: aquamarine;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.nav ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.nav ul li{
+  padding: 1rem 10px;
+}
+.nav ul a{
+  text-decoration: none;
+  color: black;
+}
+
+.form_container{
+  background-color: white;
+  margin: 4rem 15rem;
+  padding: 2rem 2rem;
+  box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+  border-radius: 10px;
+  position: relative;
+  top: 5rem;
+  bottom: 3rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+
+form .input_container{
+  display: grid;
+  grid-template-columns: 20% 50%;
+  grid-gap: 1rem;
+}
+
+.form_container .input_container .name{
+  display: flex;
+}
+.form_container .input_container .name div label{
+position: relative;
+top: -0.8rem;
+}
+
+.form_container .input_container .name #firstname {
+ margin-right: 2rem;
+}
+
+#gender_id {
+  margin-left: 8rem;
+  width: 40%;
+  padding: 0.6rem 0.5rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  border: 0.5px solid rgba(165, 42, 42, 0.452);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+form label{
+  margin-top: 0.5rem;
+}
+form input{
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 0.5px solid rgba(165, 42, 42, 0.452);
+}
+form .none_flex{
+  width: 120%;
+}
+
+form #room_type{
+  width: 63%;
+  padding: 0.6rem 0.5rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  border: 0.5px solid rgba(165, 42, 42, 0.452);
+  margin-left: 6rem;
+  border-radius: 10px;
+}
+
+
+form .residence_container{
+  display: flex;
+  margin-top: 1rem;
+}
+
+.form_container .residence_container .residence{
+  display: flex;
+  margin-left: 7rem;
+}
+.form_container .residence_container .residence input{
+  display: block;
+}
+
+.form_container .residence_container .residence label {
+  position: relative;
+  top: -0.8rem;
+}
+.form_container .residence_container .residence .city{
+  position: relative;
+  margin-left: 2rem;
+}
+
+.num_of_visitors_container{
+  display: flex;
+}
+
+.num_of_visitors_container .visitors{
+  display: flex;
+  margin-left: 2.5rem;
+}
+.num_of_visitors_container .visitors label{
+  display: block;
+  position: relative;
+  top: -1rem;
+}
+
+.num_of_visitors {
+  margin-right: 2rem;
+}
+
+.id_card_container {
+  display: flex;
+}
+.id_card_container .id_card{
+  display: flex;
+  margin-left: 8rem;
+}
+.id_card select{
+  border: 0.5px solid rgba(165, 42, 42, 0.452);
+  padding: 0.7rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+  display: block;
+}
+ .id_card #id{
+ width: 130%;
+ display: block;
+}
+.id_label{
+  position: relative;
+  top: -1rem;
+}
+
+.visitors_time{
+  display: flex;
+}
+
+.visitors_time .timing{
+  display: flex;
+  margin-left: 5.8rem;
+}
+
+.departure{
+  margin-right: 1.5rem;
+}
+
+.visitors_time .timing label{
+ display: block;
+ position: relative;
+ top: -1rem;
+}
+
+#bread_id{
+  margin-left: 3.4rem;
+  width: 40%;
+  padding: 0.6rem 0.5rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  border: 0.5px solid rgba(165, 42, 42, 0.452);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#payment_method {
+  margin-left: 4.3rem;
+  width: 40%;
+  padding: 0.6rem 0.5rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  border: 0.5px solid rgba(165, 42, 42, 0.452);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.loads{
+  display: flex;
+  flex-direction: row;
+}
+
+.loads textarea{
+  margin-left: 9rem;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border: 0.5px solid rgba(165, 42, 42, 0.452);
+}
+
+.submit{
+  margin-top: 1rem;
+  width: 52%;
+  margin-left: 11.5rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: brown;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+form small{
+  position: relative;
+  top: -1rem;
+  left: -10rem;
+  color: red;
+}

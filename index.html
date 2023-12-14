@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Hotel Database</title>
+</head>
+<body>
+    
+  <div class="container">
+   <nav class="nav">
+        <h1>F-MMM1</h1>
+        <div>
+          <h3>HOTEL & SUITES LTD</h3>
+          <small>lOUNGE BAR AND POOL</small>
+        </div>
+        <ul>
+            <a href="/"><li>Home</li></a>
+             <a href="/about"><li>About</li></a>
+             <a href="/terms"><li>Terms/Conditions</li></a>
+        </ul>
+   </nav>
+    
+   
+   <div class="form_container">
+   <form name="submit-to-google-sheet" class="form" id="form">
+     <div class="input_container">
+         <label for="name">Name:</label>
+         <div class="name">
+              <div  id="firstname" >
+                <input type="text" name="FirstName"required/>
+                <label for="firstname">First Name</label>
+              </div>
+
+              <div>
+                <input type="text" name="LastName" id="" required/>
+                <label for="lastname">last Name</label>
+              </div>
+         </div>
+     </div>
+
+     <div class="input_container">
+         <label for="email">Email:</label>
+         <input type="text" name="Email" id="email" value="none@gmail.com" class="none_flex"/>  
+     </div>
+
+     <div class="input_container">
+      <label for="phone">Phone:</label>
+      <input type="text" name="Phone" id="phone" class="none_flex" required/>  
+     </div>
+
+     <div class="gender">
+      <label for="gender">Gender</label>
+      <select id="gender_id" name="Gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select> 
+  
+     </div>
+     <div>
+      <label for="roomtype">Room Type:</label>
+      <select id="room_type" name="Room_Type" required>
+        <option value="Standard">1: Standard </option>
+        <option value="Deluxe"><b>2: Suit</b>&nbsp;(free access swimming pool and breakfast bread and eggs tea)</option>
+        <option value="Suite"><b>2: Confidencial Suit</b>&nbsp;(free access breakfast bread and eggs and tea snooker and swimming pool)</option>
+      </select> 
+     </div>
+
+     <div class="residence_container">
+          <label class="Residence">Residence</label>
+          <div class="residence">
+                <div>
+                    <input type="text" name="Country" required/>
+                    <label class="Country">Country</label>
+                </div>
+
+                <div class="city">
+                  <input type="text" name="City/Zip_Code" placeholder="Agbor / 331122" required/>
+                  <label class="City">City / Zip_Code</label>
+              </div>
+          </div>
+     </div>
+
+     <div class="input_container">
+      <label for="address">Address:</label>
+      <input type="text" name="Address" id="address" class="none_flex" required/>  
+     </div>
+
+
+     <div class="num_of_visitors_container">
+      <label class="Residence">Number Of Visitor(s)</label>
+      <div class="visitors">
+            <div class="num_of_visitors">
+                <input type="number" name="Num_Of_Guest(s)"  id="num_of_guest" required/>
+                <label class="number">Number Of Guest</label>
+            </div>
+
+            <div class="city">
+              <input type="number" name="Num_Of_Adult(s)" id="num_of_adult"  required/>
+              <label class="City">Number Of Adults</label>
+              <small id="greater"></small>
+          </div>
+       </div>
+     </div>
+
+    <div class="id_card_container">
+      <label for="id">ID Card</label>
+      <div class="id_card">
+           <div>
+            <select id="id_type" name="ID" required>
+              <option value="None">None</option>
+              <option value="NIN">NIN</option>
+              <option value="Drivers License">Drivers License</option>
+              <option value="Suite">Voter's Card</option>
+            </select> 
+            <label for="id_type">ID Type</label>
+           </div>
+
+          <div>
+            <input type="text" name="ID_Number" id="id" value="*****************">
+            <label for="id_type" class="id_label">ID Number</label>
+          </div>
+           </div>
+      </div>
+
+
+      <div class="visitors_time">
+        <label for="time">Visitors Time</label>
+         <div class="timing">
+               <div class="departure">
+                <input type="datetime-local" id="arrival" name="Arrival_Time" required/>
+                <label>Arrival Time</label>
+               </div>
+
+               <div class="">
+                <input type="datetime-local" id="departure" name="Departure_Time" required/>
+                <label>Departure Time</label>
+                <small id="departureChecker"></small>
+               </div>
+         </div>
+      </div>
+     
+      <div class="gender">
+        <label for="gender">Bed And Breakfast</label>
+        <select id="bread_id" name="Bed_And_Breakfast" required>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+       </div>
+
+       <div class="gender">
+        <label for="gender">Payment Method</label>
+        <select id="payment_method" name="Payment_Method" required>
+          <option value="Cash">Cash</option>
+          <option value="Transfer">Transfer</option>
+          <option value="Credit Card">Credit Card</option>
+        </select>
+       </div>
+
+       
+     <div class="loads">
+       <div><label for="loads">Loads</label></div>
+       <textarea type ="text" name="Loads" id="load" placeholder="Write loads..." cols="50" rows="5" required></textarea>
+     </div>
+     <button class="submit">Submit Form</button>
+    </div>
+   </form>
+  </div>
+</div>
+
+   <script>
+    const scriptURL = ' https://script.google.com/macros/s/AKfycbwbED9kyRx1OrAdkrXx7endNzJgBMV1HllmA7of5hfLe0-9a-DKJT8QZGUjyBL1ccOl/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const submit = document.querySelector('.submit')
+
+    const numOfGuest = document.getElementById('num_of_guest')
+    const numOfAdults = document.getElementById('num_of_adult')
+    const checker = document.getElementById('greater')
+    const arrival = document.getElementById('arrival')
+    const departure = document.getElementById('departure')
+    const departureChecker = document.getElementById('departureChecker')
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      const isGreater = Number(numOfAdults.value) > Number(numOfGuest.value)? true : false
+      const isLessThanOne = Number(numOfAdults.value) < 1 || Number(numOfGuest.value) < 1 ? true : false
+      const isArriDateGreaterThanDepartureTime = Date.parse(arrival.value) > Date.parse(departure.value)? true : false
+       if(isGreater){
+        checker.textContent = "(Number Of Adult can not be greater than number of Guest)"
+        departure.textContent = ""
+       }else if(isLessThanOne){
+        checker.textContent = "(Number Of Guest or number of Adult can not be less than 1)"
+        departure.textContent = ""
+       }else if(isArriDateGreaterThanDepartureTime){
+        checker.textContent = ""
+        departureChecker.textContent = "(Arrival Time can not be greater than departure time)"
+       }else{
+        departure.textContent = ""
+        checker.textContent = ""
+        submit.textContent = "Loading ..."
+       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+         .then(response =>{
+             submit.textContent = "Submit Form" 
+             alert('Form Submitted')
+             form.reset()
+         })
+         .catch(error => {
+             alert('Failed to submit')
+             console.error('Error!', error.message)
+         })
+
+       }
+    })
+  </script>
+</body>
+</html>
+
+
+<!-- -->
