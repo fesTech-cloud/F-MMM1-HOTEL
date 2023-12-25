@@ -50,7 +50,7 @@
       <input type="text" name="Phone" id="phone" class="none_flex" required/>  
      </div>
 
-     <div class="gender">
+     <div id="gender"  class="input_container">
       <label for="gender">Gender</label>
       <select id="gender_id" name="Gender" required>
         <option value="Male">Male</option>
@@ -58,7 +58,7 @@
       </select> 
   
      </div>
-     <div>
+     <div  class="input_container">
       <label for="roomtype">Room Type:</label>
       <select id="room_type" name="Room_Type" required>
         <option value="Standard">1: Standard </option>
@@ -67,7 +67,7 @@
       </select> 
      </div>
 
-     <div class="residence_container">
+     <div id="residence_container"  class="input_container">
           <label class="Residence">Residence</label>
           <div class="residence">
                 <div>
@@ -88,7 +88,7 @@
      </div>
 
 
-     <div class="num_of_visitors_container">
+     <div id="num_of_visitors_container"  class="input_container">
       <label class="Residence">Number Of Visitor(s)</label>
       <div class="visitors">
             <div class="num_of_visitors">
@@ -98,13 +98,13 @@
 
             <div class="city">
               <input type="number" name="Num_Of_Adult(s)" id="num_of_adult"  required/>
-              <label class="City">Number Of Adults</label>
+              <label class="city">Number Of Adults</label>
               <small id="greater"></small>
           </div>
        </div>
      </div>
 
-    <div class="id_card_container">
+    <div id="id_card_container"  class="input_container">
       <label for="id">ID Card</label>
       <div class="id_card">
            <div>
@@ -125,7 +125,7 @@
       </div>
 
 
-      <div class="visitors_time">
+      <div id="visitors_time"  class="input_container">
         <label for="time">Visitors Time</label>
          <div class="timing">
                <div class="departure">
@@ -141,7 +141,7 @@
          </div>
       </div>
      
-      <div class="gender">
+      <div id="gender"  class="input_container">
         <label for="gender">Bed And Breakfast</label>
         <select id="bread_id" name="Bed_And_Breakfast" required>
           <option value="Yes">Yes</option>
@@ -149,7 +149,7 @@
         </select>
        </div>
 
-       <div class="gender">
+       <div id="gender"  class="input_container">
         <label for="gender">Payment Method</label>
         <select id="payment_method" name="Payment_Method" required>
           <option value="Cash">Cash</option>
@@ -159,9 +159,9 @@
        </div>
 
        
-     <div class="loads">
+     <div id="loads"  class="input_container">
        <div><label for="loads">Loads</label></div>
-       <textarea type ="text" name="Loads" id="load" placeholder="Write loads..." cols="50" rows="5" required></textarea>
+       <textarea type ="text" name="Loads" id="loads" placeholder="Write loads..." cols="50" rows="5" required></textarea>
      </div>
      <button class="submit">Submit Form</button>
     </div>
